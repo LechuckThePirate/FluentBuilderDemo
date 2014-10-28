@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FluentBuilderDemo
 {
@@ -11,7 +7,7 @@ namespace FluentBuilderDemo
     {
         private T _shape;
 
-        #region constructor
+        #region Constructor
 
         public PolyShapeBuilder() : this(new T()) { }
 
@@ -21,6 +17,8 @@ namespace FluentBuilderDemo
         }
 
         #endregion
+
+        #region Decorators
 
         public PolyShapeBuilder<T> SetX(int x)
         {
@@ -83,6 +81,7 @@ namespace FluentBuilderDemo
             _shape.Vectors.Add(vector);
             return this;
         }
+        #endregion
 
         #region Builder
 
